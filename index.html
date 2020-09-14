@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>In ra giá trị tb mảng</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //Viết chương trình khởi tạo mảng số nguyên
+            //Hiển hiện giá trị lớn nhất trong mảng đó
+            //In ra giá trị trung bình của các phần tử trong mảng
+            //nhập vào số lượng mảng gốm n phần tử
+            //dùng for lặp qua các mảng cộng tất cả lại với nhau
+            //chia cho độ dài mảng
+            //in ra giá trị trung bình
+            var n = parseInt(prompt("Nhập vào n số phần từ của mảng : "));
+            var numbers =[];
+            var tong=0;
+            var TB;
+            for ( var i=0;i<n;i++){
+                numbers[i] = parseInt(prompt("Nhập vào phần tử thứ "+i));
+            }
+            let max = numbers[0];
+            for (var i=0;i<numbers.length;i++){
+                tong = tong + numbers[i];
+                if(max < numbers[i]){
+                    max = numbers[i];
+                }
+            }
+            TB = tong / (numbers.length);
+            document.write("Gía trị lớn nhất trong các phần tử là ",max);
+            document.write("</br>Trung bình các phần tử trong mảng là ",TB)
+        </script>
+    </body>
+</html>
